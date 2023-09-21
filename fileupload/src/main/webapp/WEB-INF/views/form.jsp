@@ -13,7 +13,7 @@
 	<input type="text" name="email" value="kickscar@gmail.com">
 	<br><br>
 	
-	<label>파일1:</label>
+	<label>파일:</label>
 	<input type="file" name="file">
 	
 	<!-- 

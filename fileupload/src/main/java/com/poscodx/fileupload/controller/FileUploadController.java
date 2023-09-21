@@ -30,10 +30,8 @@ public class FileUploadController {
 		System.out.println("file---->" + file.isEmpty());
 		
 		String url = fileUploadService.restore(file);
-		
 		model.addAttribute("url", url);
 		
 		return "result";
 	}
-	
 }
