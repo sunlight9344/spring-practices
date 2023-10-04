@@ -44,10 +44,6 @@ public class XmlConfigTest {
 		
 		User user = null;
 		
-		// Type으로 빈 가져오기
-		user = ac.getBean(User.class);
-		System.out.println(user.getName());
-		
 		// id로 빈 가져오기 id도 명시적으로 적어줘야 함 applicationContextXml 에 
 		user = (User)ac.getBean("user");
 		System.out.println(user.getName());
@@ -55,6 +51,10 @@ public class XmlConfigTest {
 		// name 으로 빈 가져오기 
 		// id에서도 찾고 name 에서도 찾고 String 찾아 삼만리
 		user = (User)ac.getBean("usr");
+		System.out.println(user.getName());
+		
+		// Type으로 빈 가져오기
+		user = ac.getBean(User.class);
 		System.out.println(user.getName());
 	}
 	
