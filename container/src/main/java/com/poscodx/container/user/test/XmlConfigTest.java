@@ -54,8 +54,30 @@ public class XmlConfigTest {
 		System.out.println(user.getName());
 		
 		// Type으로 빈 가져오기
-		user = ac.getBean(User.class);
-		System.out.println(user.getName());
+		// 같은 타입의 빈이 2개 이상 있으면 Type으로 가져오기는 실패
+		user = ac.getBean("user2", User.class);
+		System.out.println(user);
+		
+		// 파라미터 2개 생성자로 생성된 빈 가져오기I
+		user = ac.getBean("user3", User.class);
+		System.out.println(user);
+		
+		// 파라미터 2개 생성자로 생성된 빈 가져오기II
+		user = ac.getBean("user4", User.class);
+		System.out.println(user);
+		
+		// property 사용
+		user = ac.getBean("user5", User.class);
+		System.out.println(user);
+		
+		// property 사용: DI
+		user = ac.getBean("user6", User.class);
+		System.out.println(user);
+		
+		// XML 에서 Collection 써보기
+		user = ac.getBean("user7", User.class);
+		System.out.println(user);
+		
 	}
 	
 	private static void testBeanFactory01() {
