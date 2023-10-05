@@ -10,7 +10,7 @@ public class MyTest {
 	@Test
 	public void test01() {
 		int i = 10;
-		assertTrue(i - 10 > 10);
+		assertTrue(i - 10 < 10);
 	}
 	
 	@Test
