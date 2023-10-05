@@ -26,6 +26,9 @@ public class DVDPlayerJavaConfigTest {
 	// 같은 타입의 빈이 2개 이상 있는 경우
 	// 그냥 변수 이름 같게 하면 알아서 연결 시켜줌 ㅅㅅ
 	DVDPlayer dvdPlayer02;
+
+	@Autowired
+	DVDPlayer dvdPlayer03;
 	
 	@Test
 	public void testDVDPlayer01NotNull() {
@@ -35,5 +38,25 @@ public class DVDPlayerJavaConfigTest {
 	@Test
 	public void testPlay() {
 		assertEquals("Playing Movie MARVEL's Avengers", dvdPlayer01.play());
+	}
+	
+	@Test
+	public void testDVDPlayer02NotNull() {
+		assertNotNull(dvdPlayer01);
+	}
+	
+	@Test
+	public void test02Play() {
+		assertEquals("Playing Movie MARVEL's Avengers", dvdPlayer02.play());
+	}
+	
+	@Test
+	public void testDVDPlayer03NotNull() {
+		assertNotNull(dvdPlayer01);
+	}
+	
+	@Test
+	public void test03Play() {
+		assertEquals("Playing Movie MARVEL's Avengers", dvdPlayer03.play());
 	}
 }
